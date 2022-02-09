@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
+::ng-deep * {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    min-height: 5vh;
+    z-index: 1;
+}
+
+.group-right {
+    position: absolute;
+    padding-top: 1vh;
+    left: 10vw;
+    cursor: pointer;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.group-left {
+    padding-top: 1vh;
+    cursor: pointer;
+    position: absolute;
+    right: 10vw;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.group-center {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 1.5vh;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.profil {
+    position: absolute;
+    min-height: 15vh;
+    min-width: 15vw;
+    right: 5vw;
+    top: 5vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 3;
+    opacity: 0;
+}
+
+.view-profil {
+    opacity: 1;
+    animation: account 2s ease 0s 1 normal forwards;
+}
+
+.view-profil-hide {
+    opacity: 0;
+}
+
+.favourite {
+    position: absolute;
+    max-height: 35vh;
+    min-width: 25vw;
+    right: 10vw;
+    top: 5vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 2;
+    opacity: 0;
+}
+
+.panier {
+    padding: 1%;
+    position: absolute;
+    max-height: 35vh;
+    min-width: 25vw;
+    right: 5vw;
+    top: 5vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 3;
+    opacity: 0;
+}
+
+.view-fav {
+    opacity: 1;
+    animation: account 2s ease 0s 1 normal forwards;
+}
+
+.view-fav-hide {
+    opacity: 0;
+}
+
+.view-panier {
+    opacity: 1;
+    animation: account 2s ease 0s 1 normal forwards;
+}
+
+.view-panier-hide {
+    opacity: 0;
+}
+
+.contain {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contain>.items {
+    width: 10em;
+    padding: 1%;
+}
+
+.products {
+    max-height: 25vh;
+    overflow-y: scroll;
+    flex-direction: column;
+    display: flex;
+    gap: 0.5vh;
+}
+
+.products-fav {
+    max-height: 25vh;
+    flex-direction: column;
+    display: flex;
+    gap: 0.5vh;
+    overflow-y: scroll;
+}
+
+.product {
+    min-height: 10vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: white;
+}
+
+.product-fav {
+    min-height: 10vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: white;
+}
+
+.group-center>div {
+    font-family: 'Roboto Slab', serif;
+    color: black;
+    cursor: pointer;
+    margin: 0.1vw;
+}
+
+.selected {
+    color: black;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.profil>div:first-child {
+    padding: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    display: flex;
+    gap: 0.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profil>div:nth-child(2) {
+    padding: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    display: flex;
+    gap: 0.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profil>div:last-child {
+    padding: 2%;
+    display: flex;
+    gap: 0.5vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+@keyframes account {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes fav {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
