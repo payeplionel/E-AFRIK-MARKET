@@ -7,10 +7,17 @@
 .header {
     min-height: 5vh;
     z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100vw;
+    background-color: white;
 }
 
 .group-right {
     position: absolute;
+    display: block;
     padding-top: 1vh;
     left: 10vw;
     cursor: pointer;
@@ -22,6 +29,7 @@
 }
 
 .group-left {
+    display: block;
     padding-top: 1vh;
     cursor: pointer;
     position: absolute;
@@ -34,6 +42,7 @@
 }
 
 .group-center {
+    display: block;
     margin-right: auto;
     margin-left: auto;
     padding-top: 1.5vh;
@@ -45,7 +54,7 @@
 }
 
 .profil {
-    position: absolute;
+    position: fixed;
     min-height: 15vh;
     min-width: 15vw;
     right: 5vw;
@@ -58,7 +67,7 @@
 
 .view-profil {
     opacity: 1;
-    animation: account 2s ease 0s 1 normal forwards;
+    animation: account 1s ease 0s 1 normal forwards;
 }
 
 .view-profil-hide {
@@ -66,7 +75,7 @@
 }
 
 .favourite {
-    position: absolute;
+    position: fixed;
     max-height: 35vh;
     min-width: 25vw;
     right: 10vw;
@@ -79,7 +88,7 @@
 
 .panier {
     padding: 1%;
-    position: absolute;
+    position: fixed;
     max-height: 35vh;
     min-width: 25vw;
     right: 5vw;
@@ -92,7 +101,7 @@
 
 .view-fav {
     opacity: 1;
-    animation: account 2s ease 0s 1 normal forwards;
+    animation: account 1s ease 0s 1 normal forwards;
 }
 
 .view-fav-hide {
@@ -101,7 +110,7 @@
 
 .view-panier {
     opacity: 1;
-    animation: account 2s ease 0s 1 normal forwards;
+    animation: account 1s ease 0s 1 normal forwards;
 }
 
 .view-panier-hide {

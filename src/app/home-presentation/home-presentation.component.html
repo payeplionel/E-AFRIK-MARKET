@@ -1,31 +1,264 @@
-<div class="contain">
-    <img src="../../assets/img/chef.png">
-</div>
+<div class="all">
+    <div class="contain">
+        <img src="../../assets/img/chef.png">
 
-<div class="plat1">
-    <img src="../../assets/img/plat1.png" alt="" width="250px">
-</div>
+        <div class="plat1">
+            <img src="../../assets/img/plat1.png" alt="" width="250px">
+        </div>
 
-<div class="plat2">
-    <img src="../../assets/img/Plat2.png" alt="" width="250px">
-</div>
+        <div class="plat2">
+            <img src="../../assets/img/Plat2.png" alt="" width="250px">
+        </div>
 
-<div class="plat3">
-    <img src="../../assets/img/Plat3.png" alt="" width="250px">
-</div>
+        <div class="plat3">
+            <img src="../../assets/img/Plat3.png" alt="" width="250px">
+        </div>
 
-<div class="cond1">
-    <img src="../../assets/img/c1.png" alt="" width="50px">
-</div>
+        <div class="cond1">
+            <img src="../../assets/img/c1.png" alt="" width="50px">
+        </div>
 
-<div class="cond2">
-    <img src="../../assets/img/c2.png" alt="" width="50px">
-</div>
+        <div class="cond2">
+            <img src="../../assets/img/c2.png" alt="" width="50px">
+        </div>
 
-<div class="cond3">
-    <img src="../../assets/img/c3.png" alt="" width="50px">
-</div>
+        <div class="cond3">
+            <img src="../../assets/img/c3.png" alt="" width="50px">
+        </div>
 
-<div class="cond4">
-    <img src="../../assets/img/c4.png" alt="" width="50px">
+        <div class="cond4">
+            <img src="../../assets/img/c4.png" alt="" width="50px">
+        </div>
+    </div>
+
+
+    <div class="sub-title">
+        Confectionnez les meilleurs plats africains grâce à nos chefs!
+    </div>
+    <div class="recettes" (window:scroll)="onWindowScroll($event)" [ngClass]="{'bounce': bounce === 1}">
+        <div>
+            <div>
+                <img src="../../assets/img/Plat3.png" alt="">
+            </div>
+            <div>Titre</div>
+            <div class="action-bottom">
+                <span>
+                    <button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="link">visibility</mat-icon>
+                    </button>
+                </span>
+                <span>
+                    <button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="primary">play_circle_outline</mat-icon>
+                    </button>
+                </span>
+                <span></span>
+                <span>
+                    <button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="accent" (click)="click_fav('one')">{{fav_like[0]}}</mat-icon>
+                    </button>
+                </span>
+                <span>
+                    <button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="white">local_grocery_store</mat-icon>
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <div>
+            <div><img src="../../assets/img/Plat3.png" alt=""></div>
+            <div>Titre</div>
+            <div class="action-bottom">
+                <span>
+                    <mat-icon color="white">visibility</mat-icon>
+                </span>
+                <span>
+                    <mat-icon color="primary">play_circle_outline</mat-icon>
+                </span>
+                <span></span>
+                <span>
+                    <button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="accent" (click)="click_fav('two')">{{fav_like[1]}}</mat-icon>
+                    </button>
+                </span>
+                <span>
+                    <button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="white">local_grocery_store</mat-icon>
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <img src="../../assets/img/Plat3.png" alt="">
+            </div>
+            <div>Titre</div>
+            <div class="action-bottom">
+                <span>
+                    <mat-icon color="white">visibility</mat-icon>
+                </span>
+                <span>
+                    <mat-icon color="primary">play_circle_outline</mat-icon>
+                </span>
+                <span></span>
+                <span><button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="accent" (click)="click_fav('three')">{{fav_like[2]}}</mat-icon>
+                    </button></span>
+                <span>
+                    <mat-icon color="white">local_grocery_store</mat-icon>
+                </span>
+            </div>
+        </div>
+
+        <div>
+            <div><img src="../../assets/img/Plat3.png" alt=""></div>
+            <div>Titre</div>
+            <div class="action-bottom">
+                <span>
+                    <mat-icon color="white">visibility</mat-icon>
+                </span>
+                <span>
+                    <mat-icon color="primary">play_circle_outline</mat-icon>
+                </span>
+                <span></span>
+                <span><button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="accent" (click)="click_fav('four')">{{fav_like[3]}}</mat-icon>
+                    </button></span>
+                <span>
+                    <mat-icon color="white">local_grocery_store</mat-icon>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="Plus">
+        <button mat-fab class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon  color="link">add</mat-icon>
+        </button>
+    </div>
+
+    <div class="sub-title">
+        Explosion des goûts grâce aux meilleurs épices importés d'Afrique!
+    </div>
+    <div class="epice" (window:scroll)="onWindowScrollepice($event)" [ngClass]="{'bounce': bounceEpice === 1}">
+        <div>
+            <div>
+                <img src="../../assets/img/c2.png" alt="">
+            </div>
+            <div>Titre</div>
+            <div class="action-bottom">
+                <span>
+                    <button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="link">visibility</mat-icon>
+                    </button>
+                </span>
+                <span>
+                    <button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="primary">play_circle_outline</mat-icon>
+                    </button>
+                </span>
+                <span></span>
+                <span>
+                    <button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="accent" (click)="click_epice('one')">{{epice_like[0]}}</mat-icon>
+                    </button>
+                </span>
+                <span>
+                    <button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="white">local_grocery_store</mat-icon>
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <div>
+            <div><img src="../../assets/img/c2.png" alt=""></div>
+            <div>Titre</div>
+            <div class="action-bottom">
+                <span>
+                    <mat-icon color="white">visibility</mat-icon>
+                </span>
+                <span>
+                    <mat-icon color="primary">play_circle_outline</mat-icon>
+                </span>
+                <span></span>
+                <span>
+                    <button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="accent" (click)="click_epice('two')">{{epice_like[1]}}</mat-icon>
+                    </button>
+                </span>
+                <span>
+                    <button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="white">local_grocery_store</mat-icon>
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <img src="../../assets/img/c2.png" alt="">
+            </div>
+            <div>Titre</div>
+            <div class="action-bottom">
+                <span>
+                    <mat-icon color="white">visibility</mat-icon>
+                </span>
+                <span>
+                    <mat-icon color="primary">play_circle_outline</mat-icon>
+                </span>
+                <span></span>
+                <span><button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="accent" (click)="click_epice('three')">{{epice_like[2]}}</mat-icon>
+                    </button></span>
+                <span>
+                    <mat-icon color="white">local_grocery_store</mat-icon>
+                </span>
+            </div>
+        </div>
+
+        <div>
+            <div><img src="../../assets/img/c2.png" alt=""></div>
+            <div>Titre</div>
+            <div class="action-bottom">
+                <span>
+                    <mat-icon color="white">visibility</mat-icon>
+                </span>
+                <span>
+                    <mat-icon color="primary">play_circle_outline</mat-icon>
+                </span>
+                <span></span>
+                <span><button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon">
+                        <mat-icon color="accent" (click)="click_epice('four')">{{epice_like[3]}}</mat-icon>
+                    </button></span>
+                <span>
+                    <mat-icon color="white">local_grocery_store</mat-icon>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="Plus">
+        <button mat-fab class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon  color="link">add</mat-icon>
+        </button>
+    </div>
 </div>

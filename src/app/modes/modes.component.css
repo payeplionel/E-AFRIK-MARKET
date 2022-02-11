@@ -1,3 +1,7 @@
+.all {
+    background-color: rgb(250, 177, 160, 0.4);
+}
+
 .contain {
     min-height: 90vh;
     max-height: 90vh;
@@ -9,7 +13,7 @@
     max-height: 80vh;
     height: auto;
     left: 2vw;
-    bottom: 5vh;
+    bottom: 10vh;
     z-index: 2;
     animation: entrance_right 1s ease 0s 1 normal forwards;
 }
@@ -19,7 +23,7 @@
     max-height: 80vh;
     height: auto;
     right: 5vw;
-    bottom: 5vh;
+    bottom: 10vh;
     z-index: 2;
     animation: entrance_left 1s ease 0s 1 normal forwards;
 }
@@ -54,6 +58,71 @@
     bottom: 35vh;
     animation: batonnet-1 15s linear 2s infinite normal forwards;
     z-index: 1;
+}
+
+.recettes {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw;
+    opacity: 1;
+}
+
+.recettes>div {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: white;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recettes>div>div:first-child {
+    flex-grow: 18;
+    width: 100%;
+    background-color: rgb(250, 177, 160, 0.3);
+}
+
+.recettes>div>div:nth-child(2) {
+    flex-grow: 1;
+    width: 100%;
+    background-color: rgb(250, 177, 160, 0.3);
+}
+
+.recettes>div>div:nth-child(3) {
+    flex-grow: 1;
+    width: 100%;
+    background-color: rgb(250, 177, 160, 0.6);
+}
+
+.recettes>div>div:first-child>img {
+    max-width: 20vw;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+}
+
+.recettes>div:hover {
+    animation: product 2s ease 0s 1 normal forwards;
+}
+
+.sub-title {
+    margin-top: 5vh;
+    margin-left: 5vw;
+    font-family: 'Redressed', cursive;
+    font-size: x-large;
+}
+
+.action-bottom {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 @keyframes batonnet-1 {
@@ -93,5 +162,51 @@
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform: translateY(250px);
+    }
+    38% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    55% {
+        animation-timing-function: ease-in;
+        transform: translateY(65px);
+    }
+    72% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+    81% {
+        animation-timing-function: ease-in;
+        transform: translateY(28px);
+    }
+    90% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+    95% {
+        animation-timing-function: ease-in;
+        transform: translateY(8px);
+    }
+    100% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+}
+
+@keyframes product {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
     }
 }

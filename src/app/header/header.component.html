@@ -1,25 +1,27 @@
-<div class="header">
-    <div class="group-right">
-        <span class="material-icons">light_mode</span>
-        <span><mat-slide-toggle></mat-slide-toggle></span>
-        <span class="material-icons">dark_mode</span>
+<nav>
+    <div class="header">
+        <div class="group-right">
+            <span class="material-icons">light_mode</span>
+            <span><mat-slide-toggle></mat-slide-toggle></span>
+            <span class="material-icons">dark_mode</span>
+        </div>
+
+        <div class="group-left">
+            <span class="material-icons" matBadge="0" matBadgePosition="above after" matBadgeColor="accent" matBadgeSize="small">favorite</span>
+
+            <span class="material-icons" matBadge="{{panier_content}}" matBadgePosition="above after" matBadgeColor="accent" matBadgeSize="small" (click)="showPanier()">local_mall</span>
+
+            <span class="material-icons" (click)="showAccountProfil()">person</span>
+        </div>
+
+        <div class="group-center">
+            <div (click)="c_left()">{{choose_left}}</div>
+            <div class="selected">{{choose}}</div>
+            <div (click)="c_right()">{{choose_right}}</div>
+        </div>
     </div>
 
-    <div class="group-left">
-        <span class="material-icons" matBadge="0" matBadgePosition="above after" matBadgeColor="accent" matBadgeSize="small" (click)="showFavourite()">favorite</span>
-
-        <span class="material-icons" (click)="showPanier()">local_mall</span>
-
-        <span class="material-icons" (click)="showAccountProfil()">person</span>
-    </div>
-
-    <div class="group-center">
-        <div (click)="c_left()">{{choose_left}}</div>
-        <div class="selected">{{choose}}</div>
-        <div (click)="c_right()">{{choose_right}}</div>
-    </div>
-</div>
-
+</nav>
 <div class="profil" [ngClass]="profil == 1 ? 'view-profil' : 'view-profil-hide'">
     <div>
         <span>{{surname}}</span> <span>{{name}}</span>
@@ -32,7 +34,7 @@
         <hr size="1">
     </div>
     <div class="example-button-container">
-        <button mat-mini-fab color="accent" aria-label="Example icon button with a bookmark icon">
+        <button mat-mini-fab color="primary" aria-label="Example icon button with a bookmark icon">
           <mat-icon>logout</mat-icon>
         </button>
     </div>

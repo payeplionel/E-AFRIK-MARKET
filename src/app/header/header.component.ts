@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   panier = 0;
   choose = "Plats";
   temp="";
+  panier_content = 3;
   choose_left = "Modes";
   choose_right = "Textiles";
   Total = 1000;
@@ -79,5 +80,4 @@ export class HeaderComponent implements OnInit {
       this.route.navigate(['/plats']);
     }
   }
-
 }
