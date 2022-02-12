@@ -24,7 +24,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Deploying on Heroku
 
-Run `git push heroku main`
+Run `git push heroku main` and navigate to `https://e-afrik-market.herokuapp.com/`
 
 ## Further help
 
